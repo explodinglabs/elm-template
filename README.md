@@ -18,7 +18,7 @@ Visit [http://localhost/](http://localhost/).
 For production, and mount the LetsEncrypt keys into the container, and expose
 port 443:
 ```sh
-docker run -d --name standup-web --network explodinglabs --publish 80:80 --publish 443:443 -v /etc/letsencrypt/live/standupmeeting.app/fullchain.pem:/certs/fullchain.pem -v /etc/letsencrypt/live/standupmeeting.app/privkey.pem:/certs/privkey.pem ghcr.io/explodinglabs/standup-web
+docker run -d --name my-app --network explodinglabs --publish 80:80 --publish 443:443 -v /etc/letsencrypt/live/standupmeeting.app/fullchain.pem:/certs/fullchain.pem -v /etc/letsencrypt/live/standupmeeting.app/privkey.pem:/certs/privkey.pem ghcr.io/explodinglabs/standup-web
 ```
 
 To build the image:
