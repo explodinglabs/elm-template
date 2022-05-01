@@ -31,5 +31,16 @@
     "test-dependencies": {
         "direct": {},
         "indirect": {}
+    },
+    "husky": {
+      "hooks": {
+        "pre-commit": "lint-staged"
+      }
+    },
+    "lint-staged": {
+      "**/*.elm": [
+        "elm-format --validate",
+        "elm-review"
+      ]
     }
 }
